@@ -1,7 +1,10 @@
-name: Pets Plus
+name: PetsPlus
 version: '${project.version}'
 main: com.softwaremongers.petsplus.Petsplus
 api-version: 1.19
 prefix: "pp"
 authors: [ SeriouslyNix, DeltaFrost ]
 description: Pets, improved.
+
+commands:
+  pi:
