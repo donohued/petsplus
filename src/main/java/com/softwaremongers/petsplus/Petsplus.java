@@ -72,13 +72,15 @@ public final class Petsplus extends JavaPlugin implements Listener {
             }
             //create player and inv for player
             Player player = (Player) sender;
+            //TODO: save inv as name from arg, not players name
             Inventory inv = Bukkit.createInventory(player, 54, player.getName());
 
-            //look for inv attached to player uuid
+            //look for inv attached to player uuid in the hashmap an apply to inv
+            //TODO: look for inv attached to player, with the name of the given arg.
             if(menus.containsKey((player.getUniqueId().toString())))
                 inv.setContents((menus.get(player.getUniqueId().toString())));
 
-            //open the inv in question
+            //open inv variable. Loaded from hash map if key exists. New inv otherwise.
             player.openInventory(inv);
 
             return true;
