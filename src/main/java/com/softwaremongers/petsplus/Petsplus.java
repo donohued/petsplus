@@ -70,6 +70,13 @@ public final class Petsplus extends JavaPlugin implements Listener {
                 sender.sendMessage("You must be a player to use this command!");
                 return false;
             }
+
+            if(args.length != 1){
+                sender.sendMessage("Command needs 1 arg");
+                return false;
+            }
+
+            
             //create player and inv for player
             Player player = (Player) sender;
             //TODO: save inv as name from arg, not players name
